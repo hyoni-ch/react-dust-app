@@ -24,13 +24,10 @@ yarn-error.log*
 
 /package-lock.json
 
-
 # feedback
 /feedback.txt
 
 # API Key
 .env
 
-# netlify.toml
-netlify.toml
 
