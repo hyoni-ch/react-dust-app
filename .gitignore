@@ -23,6 +23,8 @@ yarn-debug.log*
 yarn-error.log*
 
 /package-lock.json
-/src/config/dev.js
 
 /feedback.txt
+
+# API Key
+.env
