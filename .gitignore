@@ -23,6 +23,12 @@ yarn-debug.log*
 yarn-error.log*
 
 /package-lock.json
-/src/config/dev.js
 
+# feedback
 /feedback.txt
+
+# API Key
+.env
+
+# netlify.toml
+netlify.toml

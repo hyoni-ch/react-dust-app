@@ -9,8 +9,9 @@ import AllPage from "./components/page/AllPage";
 import FavoritePage from "./components/page/FavoritePage";
 import { Layout } from "./components/style/Layout";
 
-const config = require("./config/dev.js");
-const apiServiceKey = config.apiServiceKey;
+const apiServiceKey = process.env.REACT_APP_DUST_API_SERVICE_KEY;
+
+const PROXY = window.location.hostname === "localhost" ? "" : "/proxy";
 
 const cities = [
   "서울",
@@ -56,7 +57,7 @@ function App() {
       setLoading(true);
 
       const response = await axios.get(
-        `/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty?serviceKey=${getParameters["serviceKey"]}&returnType=${getParameters["returnType"]}&numOfRows=${getParameters["numOfRows"]}&pageNo=${getParameters["pageNo"]}&sidoName=${getParameters["sidoName"]}&ver=${getParameters["ver"]}`
+        `${PROXY}/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty?serviceKey=${getParameters["serviceKey"]}&returnType=${getParameters["returnType"]}&numOfRows=${getParameters["numOfRows"]}&pageNo=${getParameters["pageNo"]}&sidoName=${getParameters["sidoName"]}&ver=${getParameters["ver"]}`
       );
 
       setApiData(response.data);
