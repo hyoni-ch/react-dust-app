@@ -24,6 +24,7 @@ yarn-error.log*
 
 /package-lock.json
 
+
 # feedback
 /feedback.txt
 
@@ -32,3 +33,4 @@ yarn-error.log*
 
 # netlify.toml
 netlify.toml
+
