@@ -11,7 +11,10 @@ import { Layout } from "./components/style/Layout";
 
 const apiServiceKey = process.env.REACT_APP_DUST_API_SERVICE_KEY;
 
-const PROXY = window.location.hostname === "localhost" ? "" : "/proxy";
+const PROXY =
+  window.location.hostname === "localhost"
+    ? "/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty"
+    : "/proxy";
 
 const cities = [
   "서울",
@@ -57,7 +60,7 @@ function App() {
       setLoading(true);
 
       const response = await axios.get(
-        `${PROXY}/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty?serviceKey=${getParameters["serviceKey"]}&returnType=${getParameters["returnType"]}&numOfRows=${getParameters["numOfRows"]}&pageNo=${getParameters["pageNo"]}&sidoName=${getParameters["sidoName"]}&ver=${getParameters["ver"]}`
+        `${PROXY}?serviceKey=${getParameters["serviceKey"]}&returnType=${getParameters["returnType"]}&numOfRows=${getParameters["numOfRows"]}&pageNo=${getParameters["pageNo"]}&sidoName=${getParameters["sidoName"]}&ver=${getParameters["ver"]}`
       );
 
       setApiData(response.data);
