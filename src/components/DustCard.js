@@ -44,7 +44,7 @@ export default function DustCard({ dust }) {
         setFavorited(true);
       }
     });
-  }, []);
+  }, [bookmarks]);
 
   return (
     <>

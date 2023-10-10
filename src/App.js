@@ -11,7 +11,7 @@ import { Layout } from "./components/style/Layout";
 
 const config = require("./config/dev.js");
 const apiServiceKey = config.apiServiceKey;
-// const URL = "/B552584/";
+
 const cities = [
   "서울",
   "부산",
@@ -38,6 +38,8 @@ function App() {
   const [selectCity, setSelectCity] = useState("서울");
   const [tab, setTab] = useState(0);
 
+  const allCities = tab === 0;
+
   const fetchData = async city => {
     const getParameters = {
       serviceKey: apiServiceKey,
@@ -58,7 +60,6 @@ function App() {
       );
 
       setApiData(response.data);
-      //console.log(apiData);
     } catch (e) {
       setError(e);
     }
@@ -88,7 +89,7 @@ function App() {
           tab={tab}
         />
 
-        {tab === 0 ? <AllPage apiData={apiData} /> : <FavoritePage />}
+        {allCities ? <AllPage apiData={apiData} /> : <FavoritePage />}
 
         <Tab tab={tab} setTab={setTab} />
       </Layout>
