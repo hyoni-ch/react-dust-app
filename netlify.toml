@@ -1,6 +1,6 @@
 
 [[redirects]]
-from = "/api/*"
+from = "/proxy/*"
 to = "https://apis.data.go.kr/:splat"  
 status = 200
 force = true
