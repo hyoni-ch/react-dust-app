@@ -1,0 +1,1 @@
+/proxy/* https://apis.data.go.kr/:splat 200
