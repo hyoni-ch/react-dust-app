@@ -5,7 +5,7 @@ import { Layout } from "./style/Layout";
 export default function Error() {
   return (
     <Layout style={{ alignItems: "center" }}>
-      <p>Error!</p>
+      <p>Error!!</p>
       <BiSolidErrorCircle size="100" />
     </Layout>
   );
